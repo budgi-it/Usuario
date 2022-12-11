@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: '/usuarios/'
+
+spring:
+  application:
+    name: usuarios
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jmx:
+    enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/usuariosdb?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: admin
+
