@@ -31,4 +31,8 @@ public class UsuarioService {
     public void deleteUsuarioById(long id){
         repository.deleteById(id);
     }
+
+    public Usuario findByUsuario(String usuario){
+       return repository.findByUser(usuario);
+    }
 }
