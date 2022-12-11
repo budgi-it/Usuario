@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     Usuario findById(long id);
+
+    Usuario findByUser(String usuario);
 }

@@ -78,4 +78,10 @@ public class UsuarioController {
         service.deleteUsuarioById(id);
         return ResponseEntity.ok(HttpStatus.ACCEPTED);
     }
+
+    @GetMapping(value = "/search")
+    public ResponseEntity<Usuario> findByUsuario(@RequestParam String usuario){
+        Usuario usuarioResponse = service.findByUsuario(usuario);
+        return ResponseEntity.status(HttpStatus.OK).body(usuarioResponse);
+    }
 }
